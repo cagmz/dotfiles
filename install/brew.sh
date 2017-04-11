@@ -25,6 +25,7 @@ formulas=(
     tree
     wget
     zsh
+    z
 )
 
 for formula in "${formulas[@]}"; do

@@ -1,9 +1,9 @@
 # gitconfig
 [user]
-    name = Nick Nisi
-    email = nick@nisi.org
+    name = Carlos Adrian Gomez
+    email = cagomez805@gmail.com
 [github]
-    user = nicknisi
+    user = cagmz
 [init]
     templatedir = ~/.dotfiles/git/templates
 [alias]
@@ -87,7 +87,7 @@
     # add all
     aa = !git ls-files -d | xargs git rm && git ls-files -m -o --exclude-standard | xargs git add
     # remove grep - Remove found files that are NOT under version control
-    rg = "!sh -c 'git ls-files --others --exclude-standard | grep $1 | xargs rm' -"
+    ag = "!sh -c 'git ls-files --others --exclude-standard | grep $1 | xargs rm' -"
 
     # Kaleidoscope commands
     dkal = difftool -y -t Kaleidoscope

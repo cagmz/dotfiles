@@ -28,23 +28,6 @@ function f() {
     find . -name "$1"
 }
 
-function ng-stop() {
-    sudo launchctl stop homebrew.mxcl.nginx
-}
-
-function ng-start() {
-    sudo launchctl start homebrew.mxcl.nginx
-}
-function ng-restart() {
-     sudo launchctl start homebrew.mxcl.nginx
-}
-
-function dns-restart() {
-    sudo launchctl stop homebrew.mxcl.dnsmasq
-    sudo launchctl start homebrew.mxcl.dnsmasq
-}
-
-
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
     local port="${1:-8000}"

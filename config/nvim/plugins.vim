@@ -18,6 +18,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
 Plug 'joshdick/onedark.vim'
+Plug 'crusoexia/vim-monokai'
 
 " utilities
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
@@ -47,13 +48,11 @@ Plug 'AndrewRadev/splitjoin.vim' " single/multi line code handler: gS - split on
 Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'tpope/vim-sleuth' " detect indent style (tabs vs. spaces)
 Plug 'sickill/vim-pasta' " context-aware pasting
+Plug 'airblade/vim-gitgutter' "shows a git diff in the 'gutter' (sign column)
 
 " html / templates
-Plug 'mattn/emmet-vim', { 'for': 'html' } " emmet support for vim - easily create markdup wth CSS-like syntax
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
-Plug 'mustache/vim-mustache-handlebars' " mustach support
-Plug 'digitaltoad/vim-pug', { 'for': ['jade', 'pug'] } " pug / jade support
 
 " JavaScript
 Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' } " JavaScript indent support
@@ -62,20 +61,8 @@ Plug 'othree/yajs.vim', { 'for': 'javascript' } " JavaScript syntax plugin
 Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' } " ES6 and beyond syntax
 Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript'] } " JSX support
 
-" TypeScript
-Plug 'jason0x43/vim-tss', { 'for': 'typescript', 'do': 'npm install' }
-" Plug 'Quramy/tsuquyomi', { 'for': 'typescript', 'do': 'npm install' } " extended typescript support - works as a client for TSServer
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' } " typescript support
-
-" Elm
-Plug 'lambdatoast/elm.vim', { 'for': 'elm' }
-
 " styles
 Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
-Plug 'groenewege/vim-less', { 'for': 'less' } " less support
-Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] } " set the background of hex color values to the color
-Plug 'hail2u/vim-css3-syntax', { 'for': 'css' } " CSS3 syntax support
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } " sass scss syntax support
 
 " markdown
 if (has('osx'))

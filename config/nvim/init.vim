@@ -46,9 +46,13 @@ endif
 let g:onedark_termcolors=16
 let g:onedark_terminal_italics=1
 
+let g:monokai_term_italic = 1
+let g:monokai_gui_italic = 1
+
 syntax on
-" set t_Co=256                " Explicitly tell vim that the terminal supports 256 colors"
-colorscheme onedark         " Set the colorscheme
+set t_Co=256                " Explicitly tell vim that the terminal supports 256 colors"
+colorscheme monokai         " Set the colorscheme
+
 
 " make the highlighting of tabs and other non-text less annoying
 highlight SpecialKey ctermbg=none ctermfg=8
@@ -306,9 +310,16 @@ command! FZFMru call fzf#run({
 \  'down':    '40%'})
 
 command! -bang -nargs=* Find call fzf#vim#grep(
-	\ 'rg --column --line-number --no-heading --follow --color=always '.<q-args>, 1,
+	\ 'ag --column --line-number --no-heading --follow --color=always '.<q-args>, 1,
 	\ <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'), <bang>0)
 
+"  open a NERDTree automatically when vim starts up if no files were specified?
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+"  open NERDTree automatically when vim starts up on opening a directory?
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
 " Fugitive Shortcuts
 """""""""""""""""""""""""""""""""""""

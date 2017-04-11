@@ -13,23 +13,17 @@ formulas=(
     'macvim --with-override-system-vim'
     ack
     diff-so-fancy
-    dnsmasq
     fzf
     git
     'grep --with-default-names'
-    highlight
     hub
     markdown
-    neovim/neovim/neovim
-    nginx
     reattach-to-user-namespace
     the_silver_searcher
     tmux
     tree
     wget
-    z
     zsh
-    ripgrep
 )
 
 for formula in "${formulas[@]}"; do

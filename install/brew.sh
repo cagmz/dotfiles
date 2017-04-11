@@ -18,6 +18,7 @@ formulas=(
     'grep --with-default-names'
     hub
     markdown
+    neovim/neovim/neovim
     reattach-to-user-namespace
     the_silver_searcher
     tmux

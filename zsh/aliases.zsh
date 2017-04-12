@@ -73,3 +73,19 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
 alias canary="/Applications/Google\\ Chrome\\ Canary.app/Contents/MacOS/Google\\ Chrome\\ Canary"
+
+# git
+alias g='git'
+alias gf='g fetch'
+alias gp='g pull'
+alias gs='g status'
+alias gd='g diff'
+alias gdc='g diff --cached'
+alias gch="g checkout"
+alias gc="g commit"
+alias gm="g merge"
+alias gp="g pull"
+alias gb="g branch"
+alias gg="g log --graph --oneline --decorate --all"
+alias ga="g add"
+

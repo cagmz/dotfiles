@@ -17,7 +17,6 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " colorschemes
-Plug 'joshdick/onedark.vim'
 Plug 'crusoexia/vim-monokai'
 
 " utilities
@@ -49,18 +48,17 @@ Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'tpope/vim-sleuth' " detect indent style (tabs vs. spaces)
 Plug 'sickill/vim-pasta' " context-aware pasting
 Plug 'airblade/vim-gitgutter' "shows a git diff in the 'gutter' (sign column)
-Plug 'bronson/vim-trailing-whitespace' ":FixWhitespace()
 
 " html / templates
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
 
 " JavaScript
-Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' } " JavaScript indent support
-Plug 'moll/vim-node', { 'for': 'javascript' } " node support
-Plug 'othree/yajs.vim', { 'for': 'javascript' } " JavaScript syntax plugin
-Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' } " ES6 and beyond syntax
-Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript'] } " JSX support
+" Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' } " JavaScript indent support
+" Plug 'moll/vim-node', { 'for': 'javascript' } " node support
+" Plug 'othree/yajs.vim', { 'for': 'javascript' } " JavaScript syntax plugin
+" Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' } " ES6 and beyond syntax
+" Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript'] } " JSX support
 
 " styles
 Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support

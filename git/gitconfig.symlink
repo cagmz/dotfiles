@@ -89,9 +89,6 @@
     # remove grep - Remove found files that are NOT under version control
     ag = "!sh -c 'git ls-files --others --exclude-standard | grep $1 | xargs rm' -"
 
-    # Kaleidoscope commands
-    dkal = difftool -y -t Kaleidoscope
-    mkal = mergetool -y -t Kaleidoscope
     remotes = remote -v
 
     # check out a local copy of a PR. https://gist.github.com/gnarf/5406589
@@ -128,8 +125,15 @@
     renames = copies
     mnemonicprefix = true
     compactionHeuristic = true
-[difftool]
+    tool=diffmerge
+[difftool "diffmerge"]
     prompt = false
+    cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+    tool = diffmerge
+[mergetool "diffmerge"]
+    cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+    trustExitCode = false
 [apply]
     # do not warn about missing whitespace at EOF
     whitespace = nowarn
@@ -147,11 +151,6 @@
     lineNumber = true
 [credential]
 	helper = osxkeychain
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
 [rebase]
 	instructionFormat = "[%an - %ar] %s"
 [pager]

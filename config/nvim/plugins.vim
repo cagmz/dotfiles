@@ -47,7 +47,8 @@ Plug 'AndrewRadev/splitjoin.vim' " single/multi line code handler: gS - split on
 Plug 'vim-scripts/matchit.zip' " extended % matching
 Plug 'tpope/vim-sleuth' " detect indent style (tabs vs. spaces)
 Plug 'sickill/vim-pasta' " context-aware pasting
-Plug 'airblade/vim-gitgutter' "shows a git diff in the 'gutter' (sign column)
+Plug 'airblade/vim-gitgutter' " shows a git diff in the 'gutter' (sign column)
+Plug 'scrooloose/nerdcommenter' " comment/uncomment blocks of code
 
 " html / templates
 Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to paren support

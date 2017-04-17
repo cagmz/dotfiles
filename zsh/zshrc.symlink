@@ -5,7 +5,6 @@ command_exists() {
     type "$1" > /dev/null 2>&1
 }
 
-
 # display how long all tasks over 10 seconds take
 export REPORTTIME=10
 
@@ -17,13 +16,19 @@ if [[ -d ~/code ]]; then
     export CODE_DIR=~/code
 fi
 
+# golang paths
+mkdir -p ~/code/go/{pkg,src,bin}
+export GOPATH="${HOME}/code/go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$GOPATH/bin:$PATH
+
 # source all .zsh files inside of the zsh/ directory
 for config ($ZSH/**/*.zsh) source $config
 
+# per environment configs
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
-
 
 # initialize autocomplete
 autoload -U compinit add-zsh-hook
@@ -56,8 +61,9 @@ if command_exists rbenv; then
     eval "$(rbenv init -)"
 fi
 
+# Add RVM to PATH for scripting
 if [[ -d ~/.rvm ]]; then
-    PATH=$HOME/.rvm/bin:$PATH # Add RVM to PATH for scripting
+    PATH=$HOME/.rvm/bin:$PATH
     source ~/.rvm/scripts/rvm
 fi
 
@@ -66,5 +72,6 @@ if command_exists hub; then
     eval "$(hub alias -s)"
 fi
 
+# fuzzy search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='ag -g ""'

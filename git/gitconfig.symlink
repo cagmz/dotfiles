@@ -87,7 +87,7 @@
     # add all
     aa = !git ls-files -d | xargs git rm && git ls-files -m -o --exclude-standard | xargs git add
     # remove grep - Remove found files that are NOT under version control
-    ag = "!sh -c 'git ls-files --others --exclude-standard | grep $1 | xargs rm' -"
+    rg = "!sh -c 'git ls-files --others --exclude-standard | grep $1 | xargs rm' -"
 
     remotes = remote -v
 
@@ -150,9 +150,9 @@
     extendRegexp = true
     lineNumber = true
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [rebase]
-	instructionFormat = "[%an - %ar] %s"
+    instructionFormat = "[%an - %ar] %s"
 [pager]
     diff = "diff-so-fancy | less --tabs=4 -RFX"
     show = "diff-so-fancy | less --tabs=4 -RFX"

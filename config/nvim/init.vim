@@ -116,6 +116,7 @@ set title                   " set terminal title
 set ignorecase              " case insensitive searching
 set smartcase               " case-sensitive if expresson contains a capital letter
 set hlsearch                " highlight search results
+hi Search cterm=NONE ctermfg=white ctermbg=red "needs more pop
 set incsearch               " set incremental search, like modern browsers
 set nolazyredraw            " don't redraw while executing macros
 

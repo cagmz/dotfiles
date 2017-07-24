@@ -74,3 +74,6 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 alias chrome="/Applications/Google\\ \\Chrome.app/Contents/MacOS/Google\\ \\Chrome"
 alias canary="/Applications/Google\\ Chrome\\ Canary.app/Contents/MacOS/Google\\ Chrome\\ Canary"
 
+# renew DHCP
+alias renewDHCP="sudo ipconfig set en0 BOOTP && sudo ipconfig set en0 DHCP"
+

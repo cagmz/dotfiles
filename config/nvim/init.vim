@@ -367,4 +367,5 @@ let g:SuperTabCrMapping = 0
 
 " vim:foldmethod=marker:foldlevel=0
 
-
+" vim-jsx Syntax support for both .js and .jsx
+let g:jsx_ext_required = 0

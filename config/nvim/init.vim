@@ -262,6 +262,10 @@ augroup END
 
 " Section Plugins {{{
 
+" Ag
+"""""""""""""""""""""""""""""""""""""
+nmap <silent> <leader>a :Ag<cr>
+
 " FZF
 """""""""""""""""""""""""""""""""""""
 

@@ -4,7 +4,7 @@ let g:neomake_javascript_enabled_makers = filereadable('.jshintrc') ? ['jshint']
 let g:jsx_ext_required = 0
 
 let g:neomake_javascript_jshint_exe = 'npm-exec jshint'
-let g:neomake_javascript_eslint_exe = 'npm-exec'
+let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
 let g:neomake_javascript_eslint_args = ['eslint', '-f', 'compact']
 
 " Code Folding

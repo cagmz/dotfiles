@@ -59,10 +59,6 @@ Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
 Plug 'moll/vim-node', { 'for': 'javascript' } " node support
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' } " JavaScript syntax and indentation
 Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript'] } " JSX support
-" Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' } " JavaScript indent support
-" Plug 'othree/yajs.vim', { 'for': 'javascript' } " JavaScript syntax plugin
-" Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' } " ES6 and beyond syntax
-
 " styles
 Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
 

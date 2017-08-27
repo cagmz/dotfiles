@@ -17,7 +17,7 @@ set textwidth=120
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-let g:python_host_prog = '/usr/bin/python'
+let g:python_host_prog = '/usr/local/bin/python2'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 if (has('nvim'))
@@ -368,6 +368,4 @@ let g:vim_json_syntax_conceal = 0
 let g:SuperTabCrMapping = 0
 
 " }}}
-
-" vim:foldmethod=marker:foldlevel=0
 

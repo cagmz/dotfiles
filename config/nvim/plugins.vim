@@ -40,7 +40,6 @@ Plug 'garbas/vim-snipmate' " snippet manager
 Plug 'editorconfig/editorconfig-vim' " .editorconfig support
 Plug 'MarcWeber/vim-addon-mw-utils' " interpret a file by function and cache file automatically
 Plug 'tomtom/tlib_vim' " utility functions for vim
-Plug 'sotte/presenting.vim', { 'for': 'markdown' } " a simple tool for presenting slides in vim based on text files
 Plug 'ervandew/supertab' " Perform all your vim insert mode completions with Tab
 Plug 'tpope/vim-dispatch' " asynchronous build and test dispatcher
 Plug 'tpope/vim-vinegar' " netrw helper
@@ -56,17 +55,10 @@ Plug 'gregsexton/MatchTag', { 'for': 'html' } " match tags in html, similar to p
 Plug 'othree/html5.vim', { 'for': 'html' } " html5 support
 
 " JavaScript
-Plug 'moll/vim-node', { 'for': 'javascript' } " node support
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' } " JavaScript syntax and indentation
+Plug 'moll/vim-node', { 'for': ['jsx', 'javascript'] } " node support
+Plug 'pangloss/vim-javascript', { 'for': ['jsx', 'javascript'] } " JavaScript syntax and indentation
 Plug 'mxw/vim-jsx', { 'for': ['jsx', 'javascript'] } " JSX support
 " styles
-Plug 'wavded/vim-stylus', { 'for': ['stylus', 'markdown'] } " markdown support
-
-" markdown
-if (has('osx'))
-    Plug 'itspriddle/vim-marked', { 'for': 'markdown', 'on': 'MarkedOpen' } " Open markdown files in Marked.app - mapped to <leader>m
-endif
-Plug 'tpope/vim-markdown', { 'for': 'markdown' } " markdown support
 
 " language-specific plugins
 Plug 'elzr/vim-json', { 'for': 'json' } " JSON support

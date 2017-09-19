@@ -243,10 +243,13 @@ tmux_conf_theme_clock_style='24'
 # move status line to top
 #set -g status-position top
 
-tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %l:%M %p , %m/%d | #{username}#{root} | #{hostname} '
-
-set -g mode-mouse on
-setw -g mode-mouse on
-set -g terminal-overrides 'xterm*:smcup@:rmcup@'
+tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %l:%M %p , %m/%d | #{username} '
 set -as terminal-overrides ',xterm*:sitm=\E[3m'
 set -g default-terminal 'tmux-256color-italic'
+
+# https://stackoverflow.com/questions/11832199/tmux-set-g-mouse-mode-on-doesnt-work
+set-option -g mouse on
+# make scrolling with wheels work
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+

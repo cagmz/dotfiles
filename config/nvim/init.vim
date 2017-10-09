@@ -316,7 +316,7 @@ command! FZFMru call fzf#run({
 \  'down':    '40%'})
 
 command! -bang -nargs=* Find call fzf#vim#grep(
-	\ 'ag --column --line-number --no-heading --follow --color=always '.<q-args>, 1,
+	\ 'rg --column --line-number --no-heading --follow --color=always '.<q-args>, 1,
 	\ <bang>0 ? fzf#vim#with_preview('up:60%') : fzf#vim#with_preview('right:50%:hidden', '?'), <bang>0)
 
 "  open a NERDTree automatically when vim starts up if no files were specified?
